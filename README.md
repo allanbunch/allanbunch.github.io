@@ -36,6 +36,9 @@
 
 ### Node-RED OpenAI API
 
+![GitHub Release Date](https://img.shields.io/github/release-date/allanbunch/node-red-openai-api) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/allanbunch/node-red-openai-api) ![NPM Downloads](https://img.shields.io/npm/d18m/%40inductiv%2Fnode-red-openai-api)
+![GitHub Repo stars](https://img.shields.io/github/stars/allanbunch/node-red-openai-api)
+
 ![Node-RED OpenAI API Node](https://github.com/allanbunch/allanbunch.github.io/assets/4503640/7c8a8c99-06d1-4303-88ca-bba5b129b178)
 
 Enabling advanced AI capabilities in IoT applications via Node-RED.
