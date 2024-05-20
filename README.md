@@ -2,34 +2,34 @@
 
 ## Professional Experience
 
-**Principal & Operator**
+**Principal & Operator**  
 @ Food Tech Venture
 
-**Chief Technology Innovation Officer**
+**Chief Technology Innovation Officer**  
 @ Next-Gen Talent Recruiting Startup
 
-**Independent Solutions Architect**
+**Independent Solutions Architect**  
 @ Digital Innovation Consultancy
 
-**VP of Engineering**
+**VP of Engineering**  
 @ B2B Content Intelligence Startup
 
-**Director of Engineering**
+**Director of Engineering**  
 @ Global Digital Media Agency
 
-**Director of Technology**
+**Director of Technology**  
 @ B2C Smart Grocery Shopping App Startup
 
-**Senior Software Engineer**
+**Senior Software Engineer**  
 @ Leading Social Sharing & Bookmarking Platform
 
-**Principal Architect**
+**Principal Architect**  
 @ Online Video Distribution & Monetization Startup
 
-**Director of Engineering**
+**Director of Engineering**  
 @ Global Digital Media Agency
 
-**Product Technologist**
+**Product Technologist**  
 @ Pioneering Internet Service Provider
 
 ## Projects
