@@ -36,6 +36,9 @@
 
 ### Node-RED OpenAI API
 
+<img width="265" alt="node-red-openai-api-node" src="https://github.com/allanbunch/allanbunch.github.io/assets/4503640/7c8a8c99-06d1-4303-88ca-bba5b129b178">
+
+
 Enabling advanced AI capabilities in IoT applications via Node-RED.
 
 ## Research
