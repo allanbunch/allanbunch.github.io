@@ -40,6 +40,7 @@
 
 ![GitHub Release Date](https://img.shields.io/github/release-date/allanbunch/node-red-openai-api) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/allanbunch/node-red-openai-api) ![NPM Downloads](https://img.shields.io/npm/d18m/%40inductiv%2Fnode-red-openai-api)
 ![GitHub Repo stars](https://img.shields.io/github/stars/allanbunch/node-red-openai-api)
+<a class="github-button" href="https://github.com/buttons/github-buttons" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star buttons/github-buttons on GitHub">Star</a>
 
 Enabling advanced AI capabilities in IoT applications via Node-RED.
 
