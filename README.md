@@ -48,6 +48,8 @@ Enabling advanced AI capabilities in IoT applications via Node-RED.
 
 ### Neuromorphic Artificial Intelligence
 
-Exploring the potential and benefits of AI inference input patterns that model human neural signal spikes.
+Investigating the potential and advantages of AI inference using input patterns inspired by human neural activity.
+
+[View Research](./research/neuromorphic-ai-inference.md)
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
