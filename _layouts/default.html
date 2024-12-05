@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     {% seo %}
     {% include head-custom.html %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -16,13 +15,12 @@
         <!-- Header Section -->
         <header>
             {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="Logo" />
+            <img src="{{ site.logo | relative_url }}" alt="Logo">
             {% endif %}
-
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
             <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-            <!-- Navigation Section -->
+            <!-- Navigation -->
             <nav>
                 <ul>
                     {% for item in site.data.navigation %}
@@ -33,9 +31,9 @@
         </header>
 
         <!-- Main Content Section -->
-        <section class="main-content">
+        <main class="main-content">
             {{ content }}
-        </section>
+        </main>
 
         <!-- Footer Section -->
         <footer>
