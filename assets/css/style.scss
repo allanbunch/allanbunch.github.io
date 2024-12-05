@@ -7,51 +7,157 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
   --text-color: #333;
-  --background-color: #f4f4f4;
+  --text-muted: #666;
+  --background-color: #f9f9f9;
+  --header-gradient-start: #3498db;
+  --header-gradient-end: #2ecc71;
 }
 
-// Custom global styles
+// Global styles
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
 }
 
-// Header customization
+// Header styles
 header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, var(--header-gradient-start), var(--header-gradient-end));
   color: white;
   padding: 20px;
-  border-radius: 0 0 10px 10px;
-  
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   h1 {
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    font-weight: 700;
   }
-  
+
   p {
-    opacity: 0.8;
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
   }
 }
 
-// Responsive improvements
-@media (max-width: 720px) {
-  header, section, footer {
-    width: 100%;
-    padding: 10px;
+// Navigation bar
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  li {
+    margin: 0 15px;
+  }
+
+  a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      color: var(--primary-color);
+      transform: scale(1.05);
+    }
   }
 }
 
-// Custom link styles
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  
-  &:hover {
+// Main content
+.main-content {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+  }
+}
+
+// Footer styles
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px 10px 0 0;
+
+  a {
     color: var(--secondary-color);
-    text-decoration: underline;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+// Buttons (optional use for CTAs)
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+}
+
+// Responsive design
+@media (max-width: 720px) {
+  header {
+    padding: 15px;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content {
+    margin: 20px 10px;
+    padding: 15px;
   }
 }
