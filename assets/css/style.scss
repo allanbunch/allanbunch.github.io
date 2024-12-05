@@ -6,11 +6,11 @@
 
 // Color palette
 :root {
-  --primary-color: #2c3e50; /* Dark gray-blue */
-  --secondary-color: #bdc3c7; /* Soft light gray */
-  --accent-color: #e74c3c; /* Subtle red for highlights */
-  --background-color: #ecf0f1; /* Off-white background */
-  --text-color: #2c3e50; /* Dark text color */
+  --primary-color: #2c3e50;
+  --secondary-color: #bdc3c7;
+  --accent-color: #e74c3c;
+  --background-color: #f8f9fa; /* Slightly lighter for a cleaner look */
+  --text-color: #333; /* Darker for better readability */
 }
 
 // Global styles
@@ -23,55 +23,51 @@ body {
   line-height: 1.8;
 }
 
-// Wrapper for full-width layout
+// Wrapper
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the footer sticks to the bottom if content is short */
+  min-height: 100vh;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 20px; /* Adds some spacing on smaller screens */
+  padding: 0 20px;
 }
 
-// Header styles
+// Header
 header {
   background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative; /* Ensures it doesn't become sticky */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
 
   h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 700;
   }
 
   p {
-    font-size: 1.2rem;
-    opacity: 0.85;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-style: italic;
   }
-}
 
-// Navigation bar
-nav {
-  margin: 20px 0;
-  background-color: var(--primary-color);
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  ul {
+  nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
-    margin: 0;
     padding: 0;
   }
 
-  a {
+  nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -85,52 +81,55 @@ nav {
   }
 }
 
-// Main content: Flex grid layout
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
+// Section styles
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+// Professional Experience
+.professional-experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin: 40px auto; /* Adds breathing room */
-  padding-bottom: 20px; /* Extra padding for readability */
 
-  .content-card {
-    background-color: white;
-    flex: 1 1 calc(50% - 20px); /* Two columns with spacing */
-    max-width: calc(50% - 20px);
-    padding: 20px;
+  .job {
+    background: var(--background-color);
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      margin-bottom: 10px;
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
       color: var(--primary-color);
     }
 
     p {
+      font-size: 0.9rem;
       color: var(--text-color);
     }
   }
 }
 
-// Footer styles
+// Footer
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: white;
-  border-radius: 8px 8px 0 0;
-  margin-top: auto; /* Pushes footer to the bottom if content is short */
-
-  p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
+  margin-top: auto;
+  font-size: 0.9rem;
 
   a {
     color: var(--accent-color);
@@ -144,25 +143,19 @@ footer {
 
 // Responsive design
 @media (max-width: 768px) {
-  .main-content .content-card {
-    flex: 1 1 100%; /* Single column on smaller screens */
-    max-width: 100%;
-  }
-
   header {
-    padding: 30px 10px;
+    padding: 20px 10px;
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .professional-experience {
+    grid-template-columns: 1fr;
   }
 }

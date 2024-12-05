@@ -1,72 +1,51 @@
 ---
 layout: default
-title: Allan's Bio
+title: Allan Bunch
 ---
 
-# Technology Engineering Professional
+<header>
+  <img src="/assets/images/profile-photo-neutral@275x275.png" alt="Allan Bunch">
+  <h1>allan bunch</h1>
+  <p>Visionary | Innovator | Futurist</p>
+</header>
 
-## Professional Experience
+<section>
+  <h2>Technology Engineering Professional</h2>
+  <div class="professional-experience">
+    <div class="job">
+      <h3>Principal & Operator</h3>
+      <p>@ Food Tech Venture</p>
+    </div>
+    <div class="job">
+      <h3>Chief Technology Innovation Officer</h3>
+      <p>@ Next-Gen Talent Recruiting Startup</p>
+    </div>
+    <div class="job">
+      <h3>Independent Solutions Architect</h3>
+      <p>@ Digital Innovation Consultancy</p>
+    </div>
+    <div class="job">
+      <h3>VP of Engineering</h3>
+      <p>@ B2B Content Intelligence Startup</p>
+    </div>
+  </div>
+</section>
 
-**Principal & Operator**  
-@ Food Tech Venture
+<section>
+  <h2>Projects</h2>
+  <div class="main-content">
+    <div class="content-card">
+      <h3>Node-RED OpenAI API</h3>
+      <p>Details about a project integrating AI with Node-RED...</p>
+    </div>
+    <div class="content-card">
+      <h3>Flipboard Magazines</h3>
+      <p>Engaging 145,000+ followers with curated content...</p>
+    </div>
+  </div>
+</section>
 
-**Chief Technology Innovation Officer**  
-@ Next-Gen Talent Recruiting Startup
-
-**Independent Solutions Architect**  
-@ Digital Innovation Consultancy
-
-**VP of Engineering**  
-@ B2B Content Intelligence Startup
-
-**Director of Engineering**  
-@ Global Digital Media Agency
-
-**Director of Technology**  
-@ B2C Smart Grocery Shopping App Startup
-
-**Senior Software Engineer**  
-@ Leading Social Sharing & Bookmarking Platform
-
-**Principal Architect**  
-@ Online Video Distribution & Monetization Startup
-
-**Director of Engineering**  
-@ Global Digital Media Agency
-
-**Product Technologist**  
-@ Pioneering Internet Service Provider
-
-## Projects
-
-### Node-RED OpenAI API
-
-![Node-RED OpenAI API Node](https://github.com/allanbunch/allanbunch.github.io/assets/4503640/7c8a8c99-06d1-4303-88ca-bba5b129b178)
-
-![GitHub Release Date](https://img.shields.io/github/release-date/allanbunch/node-red-openai-api) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/allanbunch/node-red-openai-api) ![NPM Downloads](https://img.shields.io/npm/d18m/%40inductiv%2Fnode-red-openai-api)
-![GitHub Repo stars](https://img.shields.io/github/stars/allanbunch/node-red-openai-api)
-<a class="github-button" style="display: inline-block;" href="https://github.com/allanbunch/node-red-openai-api" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" aria-label="Star buttons/github-buttons on GitHub">Star</a>
-
-Enabling advanced AI capabilities in IoT applications via Node-RED.
-
-## Research
-
-### Neuromorphic Artificial Intelligence
-
-Investigating the potential and advantages of AI inference using input patterns inspired by human neural activity.
-
-[View Research](./research/neuromorphic-ai-inference.md)
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
----
-
-<div class="content-card">
-  <h2>Project 1</h2>
-  <p>Details about an amazing project I worked on...</p>
-</div>
-
-<div class="content-card">
-  <h2>Project 2</h2>
-  <p>Details about another fantastic project...</p>
-</div>
+<footer>
+  <p>© 2024 Allan Bunch | Built with ❤️</p>
+  <p>Maintained by <a href="https://github.com/allanbunch">allanbunch</a></p>
+</footer>
