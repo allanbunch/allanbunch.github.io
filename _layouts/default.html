@@ -13,15 +13,16 @@
 
 <body>
     <div class="wrapper">
+        <!-- Header Section -->
         <header>
             {% if site.logo %}
-            <img src="{{site.logo | relative_url}}" alt="Logo" />
+            <img src="{{ site.logo | relative_url }}" alt="Logo" />
             {% endif %}
 
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
             <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-            <!-- New Navigation Section -->
+            <!-- Navigation Section -->
             <nav>
                 <ul>
                     {% for item in site.data.navigation %}
@@ -29,25 +30,16 @@
                     {% endfor %}
                 </ul>
             </nav>
-
-            <!-- End Navigation Section -->
-
-            <p class="view">
-                <a href="{{ site.github.repository_url }}">View the Project on GitHub
-                    <small>{{ site.github.repository_nwo }}</small>
-                </a>
-            </p>
         </header>
 
-        <section>
-            <div class="main-content">
-                {{ content }}
-            </div>
-
-            {% include custom-sidebar.html %}
+        <!-- Main Content Section -->
+        <section class="main-content">
+            {{ content }}
         </section>
 
+        <!-- Footer Section -->
         <footer>
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }} | Built with ❤️</p>
             <p>Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         </footer>
     </div>

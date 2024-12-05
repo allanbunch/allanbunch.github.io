@@ -1,3 +1,8 @@
+---
+layout: default
+title: Allan's Bio
+---
+
 # Technology Engineering Professional
 
 ## Professional Experience
@@ -53,3 +58,15 @@ Investigating the potential and advantages of AI inference using input patterns 
 [View Research](./research/neuromorphic-ai-inference.md)
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+---
+
+<div class="content-card">
+  <h2>Project 1</h2>
+  <p>Details about an amazing project I worked on...</p>
+</div>
+
+<div class="content-card">
+  <h2>Project 2</h2>
+  <p>Details about another fantastic project...</p>
+</div>
