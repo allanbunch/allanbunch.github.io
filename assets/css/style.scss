@@ -1,0 +1,57 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Color palette
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+// Custom global styles
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+// Header customization
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  
+  h1 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  p {
+    opacity: 0.8;
+  }
+}
+
+// Responsive improvements
+@media (max-width: 720px) {
+  header, section, footer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+// Custom link styles
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+}
