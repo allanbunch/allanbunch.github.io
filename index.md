@@ -1,4 +1,4 @@
-# The Technology Engineering Professional
+# Technology Engineering Professional
 
 ## Professional Experience
 

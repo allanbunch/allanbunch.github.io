@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    {% include head-custom.html %}
+    <link rel="stylesheet" href="{{ " /assets/css/style.css" | relative_url }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            {% if site.logo %}
+            <img src="{{site.logo | relative_url}}" alt="Logo" />
+            {% endif %}
+
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+            <p class="view">
+                <a href="{{ site.github.repository_url }}">View the Project on GitHub
+                    <small>{{ site.github.repository_nwo }}</small>
+                </a>
+            </p>
+        </header>
+
+        <section>
+            <div class="main-content">
+                {{ content }}
+            </div>
+
+            {% include custom-sidebar.html %}
+        </section>
+
+        <footer>
+            <p>Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+            <p><small>Hosted on GitHub Pages &mdash; Theme by <a
+                        href="https://github.com/orderedlist">orderedlist</a></small></p>
+        </footer>
+    </div>
+    <script src="{{ " /assets/js/scale.fix.js" | relative_url }}"></script>
+</body>
+
+</html>

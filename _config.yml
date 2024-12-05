@@ -6,15 +6,11 @@ theme: jekyll-theme-minimal
 author:
   name: Allan
 
-# Navigation links
-nav_links:
-  - name: Home
-    url: /
-  - name: Projects
-    url: /projects/
-  - name: Contact
-    url: /contact/
-
-# Optional social links
+# Social links
 github_username: allanbunch
 linkedin_username: allanbunch
+
+# Custom build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
