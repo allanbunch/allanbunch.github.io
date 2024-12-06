@@ -12,30 +12,25 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Hero Section -->
-        <header class="hero">
-            <h1>Allan Bunch</h1>
-            <p>Technology Innovator | Visionary | Futurist</p>
-        </header>
+    <!-- Full-width layout -->
+    <header class="hero">
+        <h1>Allan Bunch</h1>
+        <p>Technology Innovator | Visionary | Futurist</p>
+    </header>
 
+    <main>
+        {{ content }}
+    </main>
 
-        <!-- Main Content -->
-        <main>
-            <!-- Projects and Professional Experience -->
-            {{ content }}
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>© {{ site.time | date: '%Y' }} Allan Bunch</p>
-            <ul class="social-links">
-                <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
-                <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </footer>
-    </div>
+    <footer>
+        <p>© {{ site.time | date: '%Y' }} Allan Bunch</p>
+        <ul class="social-links">
+            <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+            <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </footer>
 </body>
+
 
 </html>

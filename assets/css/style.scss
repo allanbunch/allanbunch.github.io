@@ -6,7 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --link-hover-color: #f1c40f; /* New for accessibility */
+  --link-hover-color: #f1c40f; /* For accessibility */
 }
 
 body {
@@ -17,13 +17,12 @@ body {
   padding: 0;
 }
 
+/* Remove width constraint for full-width layout */
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 100%; /* Allow full width */
+  padding: 0; /* Remove padding */
 }
 
-/* Hero Section */
 .hero {
   background: var(--primary-color);
   color: white;
@@ -39,31 +38,29 @@ body {
   font-size: 1.2rem;
 }
 
-/* Cards Section */
 .cards-section {
   margin: 60px 0;
-  text-align: center;
 }
 
 .cards-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-color);
+  text-align: center;
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: center; /* Align cards in the center */
 }
 
 .card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 20px); /* Four cards per row */
-  max-width: calc(25% - 20px);
+  flex: 1 1 calc(20% - 20px); /* Five cards per row */
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -76,7 +73,7 @@ body {
 
 .card h3 {
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin: 10px 0;
   color: var(--primary-color);
 }
 
@@ -85,52 +82,20 @@ body {
   color: #7f8c8d;
 }
 
-/* Project and Experience Logos */
-.cards-section.professional-experience .card .logo-wrapper {
-  background-color: var(--text-color); /* Dark background for contrast */
-  border-radius: 8px; /* Rounded corners */
-  display: flex; /* Flexbox for alignment */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 10px; /* Add padding around the logo */
-  margin-bottom: 8px; /* Space below the logo */
+.card .logo-wrapper {
+  background-color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 8px;
 }
 
-.cards-section.professional-experience .card .company-logo {
-  width: auto;
-  height: 35px; /* Normalized height */
-  filter: grayscale(100%); /* Greyscale effect */
-  opacity: 0.8; /* Subtle fade */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
+.card .company-logo {
+  height: 35px;
+  display: block;
 }
 
-.cards-section.professional-experience .card .company-logo:hover {
-  opacity: 1; /* Restore full opacity on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .cards-section.professional-experience .card {
-    flex: 1 1 calc(25% - 15px); /* Three cards per row on medium screens */
-    max-width: calc(25% - 15px);
-  }
-}
-
-@media (max-width: 768px) {
-  .cards-section.professional-experience .card {
-    flex: 1 1 calc(33.33% - 15px); /* Two cards per row on smaller screens */
-    max-width: calc(33.33% - 15px);
-  }
-}
-
-@media (max-width: 480px) {
-  .cards-section.professional-experience .card {
-    flex: 1 1 100%; /* Full-width cards on very small screens */
-  }
-}
-
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -139,18 +104,10 @@ footer {
 }
 
 footer a {
-  color: #ecf0f1; /* Lighter color for better contrast */
+  color: #ecf0f1;
   text-decoration: none;
 }
 
 footer a:hover {
   color: var(--link-hover-color);
-}
-
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
 }
