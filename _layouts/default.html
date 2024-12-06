@@ -3,43 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo %}
-    {% include head-custom.html %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta name="description" content="{{ site.description | default: 'Professional bio of Allan Bunch' }}">
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- Global Header -->
-        <header>
-            {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="Logo">
-            {% endif %}
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
-            <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-            <!-- Global Navigation -->
-            <nav>
-                <ul>
-                    {% for item in site.data.navigation %}
-                    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </nav>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Allan Bunch</h1>
+                <p>Technology Innovator | Visionary | Futurist</p>
+                <a href="#projects" class="cta-button">Explore My Projects</a>
+            </div>
         </header>
 
         <!-- Main Content -->
         <main>
-            {{ content }}
+            <!-- Projects Section -->
+            <section id="projects" class="projects">
+                <h2>Highlighted Projects</h2>
+                <div class="project-grid">
+                    {{ content }}
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="experience">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    {% for job in site.data.experience %}
+                    <div class="timeline-item">
+                        <h3>{{ job.title }}</h3>
+                        <p>@ {{ job.company }}</p>
+                        <p>{{ job.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
         </main>
 
-        <!-- Global Footer -->
+        <!-- Footer -->
         <footer>
-            <p>© {{ site.time | date: '%Y' }} {{ site.title }} | Built with ❤️</p>
-            <p>Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+            <p>© {{ site.time | date: '%Y' }} Allan Bunch. Built with ❤️.</p>
+            <ul class="social-links">
+                <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+                <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
         </footer>
     </div>
 </body>

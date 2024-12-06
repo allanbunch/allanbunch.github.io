@@ -1,161 +1,94 @@
----
----
-
-// Import the base GitHub theme
-@import "{{ site.theme }}";
-
-// Color palette
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #bdc3c7;
+  --primary-color: #34495e;
   --accent-color: #e74c3c;
-  --background-color: #f8f9fa; /* Slightly lighter for a cleaner look */
-  --text-color: #333; /* Darker for better readability */
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --light-text-color: #bdc3c7;
 }
 
-// Global styles
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  line-height: 1.8;
 }
 
-// Wrapper
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-// Header
-header {
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+/* Hero Section */
+.hero {
+  background-color: var(--primary-color);
   color: white;
-  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin: 10px 0;
-    font-weight: 700;
-  }
-
-  p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: var(--accent-color);
-    }
-  }
+  padding: 50px 20px;
 }
 
-// Section styles
-section {
-  margin: 40px 0;
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c0392b;
+}
+
+/* Projects Section */
+.projects {
+  margin: 50px 0;
+}
+
+.project-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: white;
   padding: 20px;
-  background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px);
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+.project h3 {
+  margin-bottom: 10px;
   color: var(--primary-color);
-  text-align: center;
 }
 
-// Professional Experience
-.professional-experience {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-
-  .job {
-    background: var(--background-color);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      color: var(--primary-color);
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: var(--text-color);
-    }
-  }
+.project a {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
-// Footer
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
-  margin-top: auto;
-  font-size: 0.9rem;
-
-  a {
-    color: var(--accent-color);
-    text-decoration: none;
-
-    &:hover {
-      color: white;
-    }
-  }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  header {
-    padding: 20px 10px;
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    p {
-      font-size: 0.9rem;
-    }
-  }
-
-  .professional-experience {
-    grid-template-columns: 1fr;
-  }
 }
