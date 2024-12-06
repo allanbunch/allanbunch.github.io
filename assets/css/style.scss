@@ -17,11 +17,11 @@ body {
   padding: 0;
 }
 
-/* Main Container */
+/* Ensure consistent spacing for the main content */
 .container {
-  padding: 0 20px;
+  padding: 0 20px; /* Add margin to prevent content from touching viewport edges */
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1200px; /* Optional: constrain maximum width */
 }
 
 /* Hero Section */
@@ -29,31 +29,29 @@ body {
   background: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 40px 20px; /* Adjusted padding for better responsiveness */
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
 .hero p {
-  font-size: 1rem;
-  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-/* Headings for Sections */
 section h2, section h3 {
   text-transform: uppercase;
 }
 
 /* Cards Section */
 .cards-section {
-  margin: 40px 0;
+  margin: 60px 0;
 }
 
 .cards-section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-color);
   text-align: center;
@@ -62,18 +60,18 @@ section h2, section h3 {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Reduced gap for smaller screens */
-  justify-content: center;
+  gap: 20px; /* Consistent spacing between cards */
+  justify-content: center; /* Center-align cards */
 }
 
 .card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(100% - 20px); /* Full-width by default for better stacking */
-  max-width: 300px;
-  padding: 15px;
+  flex: 1 1 calc(20% - 20px); /* Ensure consistent card widths */
+  max-width: 300px; /* Constrain maximum width */
   text-align: center;
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -83,38 +81,47 @@ section h2, section h3 {
 }
 
 .card h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 10px 0;
   color: var(--primary-color);
 }
 
+.cards-section.professional-experience .card h3 {
+  opacity: 0.8;
+}
+
+.cards-section.professional-experience .card h3:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 .card p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #7f8c8d;
 }
 
-/* Professional Experience Logos */
+/* Logo Styles */
 .cards-section.professional-experience .card .logo-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--text-color);
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 8px;
   border-radius: 8px;
 }
 
+img.project-logo,
 .cards-section.professional-experience .card .company-logo {
-  width: auto;
-  height: 30px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: auto; /* Maintain aspect ratio */
+  height: 35px; /* Normalize logo size */
+  filter: grayscale(100%); /* Apply greyscale */
+  opacity: 0.8; /* Subtle fade for aesthetics */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
 }
 
-.cards-section.professional-experience .card .company-logo:hover {
-  opacity: 1;
-  transform: scale(1.05);
+img.project-logo {
+  max-width: 80%;
 }
 
 /* Footer */
@@ -126,12 +133,12 @@ footer {
 }
 
 footer a {
-  color: #ecf0f1;
+  color: #ecf0f1; /* Accessible contrast */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--link-hover-color);
+  color: var(--link-hover-color); /* Highlight effect */
 }
 
 .social-links {
@@ -139,46 +146,26 @@ footer a:hover {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px; /* Add space between footer links */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .cards-container .card {
-    flex: 1 1 calc(33.33% - 15px); /* Three cards per row */
-    max-width: calc(33.33% - 15px);
+    flex: 1 1 calc(25% - 15px); /* Three cards per row on medium screens */
+    max-width: calc(25% - 15px);
   }
 }
 
 @media (max-width: 768px) {
   .cards-container .card {
-    flex: 1 1 calc(50% - 15px); /* Two cards per row */
-    max-width: calc(50% - 15px);
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
+    flex: 1 1 calc(33.33% - 15px); /* Two cards per row on smaller screens */
+    max-width: calc(33.33% - 15px);
   }
 }
 
 @media (max-width: 480px) {
   .cards-container .card {
-    flex: 1 1 100%; /* Full-width cards for small devices */
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.8rem;
-  }
-
-  .cards-section.professional-experience .card .company-logo {
-    height: 25px; /* Scale down logos further for small devices */
+    flex: 1 1 100%; /* Full-width cards on very small screens */
   }
 }
