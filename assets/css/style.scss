@@ -133,15 +133,16 @@ body {
 
 .cards-section.professional-experience .card .company-logo {
   width: auto; /* Maintain aspect ratio */
-  height: 50px; /* Normalize logo height */
-  margin-bottom: 10px; /* Space below logo */
+  height: 35px; /* Smaller logo height */
+  margin-bottom: 8px; /* Reduced space below the logo */
   filter: grayscale(100%); /* Convert to greyscale */
-  opacity: 0.8; /* Slight fade for a subtle look */
-  transition: opacity 0.3s ease; /* Add a hover effect */
+  opacity: 0.8; /* Slight fade for subtle appearance */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
 }
 
 .cards-section.professional-experience .card .company-logo:hover {
   opacity: 1; /* Restore full opacity on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 
