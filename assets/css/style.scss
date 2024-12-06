@@ -97,13 +97,10 @@ body {
 }
 
 .cards-section.professional-experience .card .company-logo {
-  width: auto; /* Maintain aspect ratio */
+  width: auto;
   height: 35px; /* Normalized height */
-  display: block; /* Ensure centering */
-  margin: 0 auto 8px; /* Center horizontally and add spacing below */
-  filter: none; /* Remove greyscale */
-  fill: black; /* Force SVGs to black */
-  opacity: 0.9; /* Slight fade for a clean look */
+  filter: grayscale(100%); /* Greyscale effect */
+  opacity: 0.8; /* Subtle fade */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
 }
 
