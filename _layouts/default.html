@@ -1,14 +1,14 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,27 +22,8 @@
 
         <!-- Main Content -->
         <main>
-            <!-- Highlighted Projects -->
-            <section id="projects" class="projects">
-                <h2>Highlighted Projects</h2>
-                <div class="card-container">
-                    {{ content }}
-                </div>
-            </section>
-
-            <!-- Professional Experience -->
-            <section class="experience">
-                <h2>Professional Experience</h2>
-                <div class="timeline">
-                    {% for job in site.data.experience %}
-                    <div class="timeline-item">
-                        <h3>{{ job.title }}</h3>
-                        <p>@ {{ job.company }}</p>
-                        <p>{{ job.description }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
+            <!-- Projects and Professional Experience -->
+            {{ content }}
         </main>
 
         <!-- Footer -->
