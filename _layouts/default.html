@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <!-- Header Section -->
+        <!-- Global Header -->
         <header>
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo">
@@ -21,7 +21,7 @@
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
             <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-            <!-- Navigation -->
+            <!-- Global Navigation -->
             <nav>
                 <ul>
                     {% for item in site.data.navigation %}
@@ -31,12 +31,12 @@
             </nav>
         </header>
 
-        <!-- Main Content Section -->
-        <main class="main-content">
+        <!-- Main Content -->
+        <main>
             {{ content }}
         </main>
 
-        <!-- Footer Section -->
+        <!-- Global Footer -->
         <footer>
             <p>© {{ site.time | date: '%Y' }} {{ site.title }} | Built with ❤️</p>
             <p>Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
