@@ -103,30 +103,49 @@ body {
 
 /* Smaller Professional Experience Cards */
 .cards-section.professional-experience .card {
-  flex: 1 1 calc(33% - 20px); /* Three cards per row */
-  max-width: calc(33% - 20px);
-  padding: 15px; /* Reduced padding */
-  font-size: 0.9rem; /* Smaller font size */
+  flex: 1 1 calc(20% - 15px); /* Four cards per row */
+  max-width: calc(20% - 15px);
+  padding: 10px; /* Reduced padding */
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+.cards-section.professional-experience .card i {
+  font-size: 2.5rem; /* Slightly smaller icon */
 }
 
 .cards-section.professional-experience .card h3 {
-  font-size: 1rem; /* Smaller heading */
+  font-size: 0.9rem; /* Smaller heading */
+  margin-bottom: 5px;
 }
 
 .cards-section.professional-experience .card p {
-  font-size: 0.8rem; /* Smaller paragraph text */
+  font-size: 0.75rem; /* Smaller paragraph text */
 }
 
+.cards-section.professional-experience .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .cards-section.professional-experience .card {
+    flex: 1 1 calc(25% - 15px); /* Three cards per row on medium screens */
+    max-width: calc(25% - 15px);
+  }
+}
+
 @media (max-width: 768px) {
-  .cards-container .card {
-    flex: 1 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+  .cards-section.professional-experience .card {
+    flex: 1 1 calc(33.33% - 15px); /* Two cards per row on smaller screens */
+    max-width: calc(33.33% - 15px);
   }
 }
 
 @media (max-width: 480px) {
-  .cards-container .card {
-    flex: 1 1 100%; /* Full-width cards for small screens */
+  .cards-section.professional-experience .card {
+    flex: 1 1 100%; /* Full-width cards on very small screens */
   }
 }
 
