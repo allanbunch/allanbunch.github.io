@@ -40,7 +40,8 @@ body {
 }
 
 .cta-button {
-  display: inline-block;
+  // display: inline-block;
+  display: none;
   margin-top: 20px;
   background: var(--accent-color);
   color: white;
