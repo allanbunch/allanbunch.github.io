@@ -134,7 +134,8 @@ body {
 .cards-section.professional-experience .card .company-logo {
   width: auto;
   height: 35px;
-  margin-bottom: 8px;
+  display: block;
+  margin: 0 auto 8px;
   filter: grayscale(100%);
   opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.3s ease;
