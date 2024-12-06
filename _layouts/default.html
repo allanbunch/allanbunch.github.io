@@ -4,29 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description | default: 'Professional bio of Allan Bunch' }}">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    {% seo %}
 </head>
 
 <body>
     <div class="wrapper">
         <!-- Hero Section -->
         <header class="hero">
-            <div class="hero-content">
-                <h1>Allan Bunch</h1>
-                <p>Technology Innovator | Visionary | Futurist</p>
-                <a href="#projects" class="cta-button">Explore My Projects</a>
-            </div>
+            <h1>Allan Bunch</h1>
+            <p>Technology Innovator | Visionary | Futurist</p>
+            <a href="#projects" class="cta-button">Explore My Projects</a>
         </header>
 
         <!-- Main Content -->
         <main>
-            <!-- Projects Section -->
+            <!-- Highlighted Projects -->
             <section id="projects" class="projects">
                 <h2>Highlighted Projects</h2>
-                <div class="project-grid">
+                <div class="card-container">
                     {{ content }}
                 </div>
             </section>
