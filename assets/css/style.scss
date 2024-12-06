@@ -6,6 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
+  --link-hover-color: #f1c40f; /* New for accessibility */
 }
 
 body {
@@ -54,12 +55,22 @@ body {
 }
 
 /* Cards Section */
+.cards-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.cards-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin: 40px 0;
 }
 
 .card {
@@ -111,6 +122,15 @@ footer {
   padding: 20px;
   background: var(--primary-color);
   color: white;
+}
+
+footer a {
+  color: #ecf0f1; /* Lighter color for better contrast */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--link-hover-color);
 }
 
 .social-links {
