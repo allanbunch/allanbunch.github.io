@@ -141,6 +141,14 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.cards-section.professional-experience .card .logo-wrapper {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 50px; /* Ensure consistent spacing for all logos */
+  margin-bottom: 8px; /* Space below the logo */
+}
+
 .cards-section.professional-experience .card .company-logo:hover {
   opacity: 1;
   transform: scale(1.05);
