@@ -131,6 +131,20 @@ body {
   font-size: 0.75rem;
 }
 
+.cards-section.professional-experience .card .company-logo {
+  width: auto; /* Maintain aspect ratio */
+  height: 50px; /* Normalize logo height */
+  margin-bottom: 10px; /* Space below logo */
+  filter: grayscale(100%); /* Convert to greyscale */
+  opacity: 0.8; /* Slight fade for a subtle look */
+  transition: opacity 0.3s ease; /* Add a hover effect */
+}
+
+.cards-section.professional-experience .card .company-logo:hover {
+  opacity: 1; /* Restore full opacity on hover */
+}
+
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .cards-section.professional-experience .card {
