@@ -6,7 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --link-hover-color: #f1c40f; /* New for accessibility */
+  --link-hover-color: #f1c40f;
 }
 
 body {
@@ -62,7 +62,7 @@ body {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 20px); /* Four cards per row */
+  flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
   text-align: center;
   padding: 20px;
@@ -101,58 +101,54 @@ body {
   text-decoration: underline;
 }
 
-/* Smaller Professional Experience Cards */
 .cards-section.professional-experience .card {
-  flex: 1 1 calc(20% - 15px); /* Four cards per row */
+  flex: 1 1 calc(20% - 15px);
   max-width: calc(20% - 15px);
-  padding: 10px; /* Reduced padding */
-  font-size: 0.8rem; /* Smaller font size */
+  padding: 10px;
+  font-size: 0.8rem;
 }
 
 .cards-section.professional-experience .card i {
-  font-size: 2.5rem; /* Slightly smaller icon */
+  font-size: 2.5rem;
 }
 
 .cards-section.professional-experience .card h3 {
-  font-size: 0.9rem; /* Smaller heading */
-  margin-bottom: 5px;
-}
-
-.cards-section.professional-experience .card p {
-  font-size: 0.75rem; /* Smaller paragraph text */
-}
-
-.cards-section.professional-experience .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px; /* Add space below the title */
 }
 
 .cards-section.professional-experience .card .company-name {
-  font-size: 0.9rem; /* Slightly larger than the description text */
-  font-weight: bold; /* Emphasizes the company name */
-  color: var(--primary-color); /* Matches the heading color */
-  margin-bottom: 5px; /* Adds space between the company name and description */
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin-bottom: 10px;
 }
 
+.cards-section.professional-experience .card p {
+  font-size: 0.75rem;
+}
 
-/* Responsive Adjustments */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .cards-section.professional-experience .card {
-    flex: 1 1 calc(25% - 15px); /* Three cards per row on medium screens */
+    flex: 1 1 calc(25% - 15px);
     max-width: calc(25% - 15px);
   }
 }
 
 @media (max-width: 768px) {
   .cards-section.professional-experience .card {
-    flex: 1 1 calc(33.33% - 15px); /* Two cards per row on smaller screens */
+    flex: 1 1 calc(33.33% - 15px);
     max-width: calc(33.33% - 15px);
   }
 }
 
 @media (max-width: 480px) {
   .cards-section.professional-experience .card {
-    flex: 1 1 100%; /* Full-width cards on very small screens */
+    flex: 1 1 100%;
   }
 }
 
@@ -165,7 +161,7 @@ footer {
 }
 
 footer a {
-  color: #ecf0f1; /* Lighter color for better contrast */
+  color: #ecf0f1;
   text-decoration: none;
 }
 
