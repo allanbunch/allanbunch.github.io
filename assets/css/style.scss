@@ -38,6 +38,13 @@ body {
   font-size: 1.2rem;
 }
 
+.container {
+  padding: 0 20px; /* Add space to the left and right edges */
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Optional: constrain the max width */
+}
+
+
 .cards-section {
   margin: 60px 0;
 }
@@ -53,16 +60,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; /* Align cards in the center */
+  justify-content: space-between; /* Ensures even spacing between cards */
 }
 
 .card {
+  flex: 1 1 300px; /* Set a base width for all cards */
+  max-width: 300px; /* Enforce a consistent maximum width */
+  text-align: center;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(20% - 20px); /* Five cards per row */
-  text-align: center;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
