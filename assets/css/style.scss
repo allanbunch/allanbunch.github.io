@@ -17,12 +17,14 @@ body {
   padding: 0;
 }
 
-/* Remove width constraint for full-width layout */
-.wrapper {
-  max-width: 100%; /* Allow full width */
-  padding: 0; /* Remove padding */
+/* Ensure consistent spacing for the main content */
+.container {
+  padding: 0 20px; /* Add margin to prevent content from touching viewport edges */
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: constrain maximum width */
 }
 
+/* Hero Section */
 .hero {
   background: var(--primary-color);
   color: white;
@@ -38,13 +40,7 @@ body {
   font-size: 1.2rem;
 }
 
-.container {
-  padding: 0 20px; /* Add space to the left and right edges */
-  margin: 0 auto; /* Center the content */
-  max-width: 1200px; /* Optional: constrain the max width */
-}
-
-
+/* Cards Section */
 .cards-section {
   margin: 60px 0;
 }
@@ -59,18 +55,18 @@ body {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between; /* Ensures even spacing between cards */
+  gap: 20px; /* Consistent spacing between cards */
+  justify-content: center; /* Center-align cards */
 }
 
 .card {
-  flex: 1 1 300px; /* Set a base width for all cards */
-  max-width: 300px; /* Enforce a consistent maximum width */
-  text-align: center;
   background: white;
   border-radius: 8px;
-  padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(20% - 20px); /* Ensure consistent card widths */
+  max-width: 300px; /* Constrain maximum width */
+  text-align: center;
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -90,20 +86,31 @@ body {
   color: #7f8c8d;
 }
 
-.card .logo-wrapper {
-  background-color: var(--text-color);
+/* Logo Styles */
+.cards-section.professional-experience .card .logo-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  margin-bottom: 8px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: var(--text-color); /* Dark background for light logos */
+  padding: 10px; /* Space around the logo */
+  margin-bottom: 8px; /* Space below the logo */
+  border-radius: 8px; /* Optional rounded corners */
 }
 
-.card .company-logo {
-  height: 35px;
-  display: block;
+.cards-section.professional-experience .card .company-logo {
+  width: auto; /* Maintain aspect ratio */
+  height: 35px; /* Normalize logo size */
+  filter: grayscale(100%); /* Apply greyscale */
+  opacity: 0.8; /* Subtle fade for aesthetics */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
 }
 
+.cards-section.professional-experience .card .company-logo:hover {
+  opacity: 1; /* Restore full opacity on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -112,10 +119,39 @@ footer {
 }
 
 footer a {
-  color: #ecf0f1;
+  color: #ecf0f1; /* Accessible contrast */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--link-hover-color);
+  color: var(--link-hover-color); /* Highlight effect */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Add space between footer links */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .cards-container .card {
+    flex: 1 1 calc(25% - 15px); /* Three cards per row on medium screens */
+    max-width: calc(25% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container .card {
+    flex: 1 1 calc(33.33% - 15px); /* Two cards per row on smaller screens */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container .card {
+    flex: 1 1 100%; /* Full-width cards on very small screens */
+  }
 }
