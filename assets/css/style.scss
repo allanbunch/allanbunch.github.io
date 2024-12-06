@@ -127,6 +127,13 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.cards-section.professional-experience .card .company-name {
+  font-size: 0.9rem; /* Slightly larger than the description text */
+  font-weight: bold; /* Emphasizes the company name */
+  color: var(--primary-color); /* Matches the heading color */
+  margin-bottom: 5px; /* Adds space between the company name and description */
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
