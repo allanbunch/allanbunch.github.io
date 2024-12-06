@@ -120,6 +120,10 @@ img.project-logo,
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hover effects */
 }
 
+img.project-logo {
+  max-width: 80%;
+}
+
 /* Footer */
 footer {
   text-align: center;
