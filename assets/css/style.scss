@@ -165,7 +165,18 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
+  .cards-container {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px;
+  }
+
   .cards-container .card {
     flex: 1 1 100%; /* Full-width cards on very small screens */
+    max-width: 100%; /* Remove width constraints */
+  }
+
+  img.project-logo, .cards-section.professional-experience .card .company-logo {
+    height: auto; /* Adjust for smaller screens */
+    max-width: 90%;
   }
 }
