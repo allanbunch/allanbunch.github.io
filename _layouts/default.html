@@ -13,28 +13,90 @@
     <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> -->
 </head>
 
-<body class="min-h-screen">
-    <!-- Navigation -->
-    <div class="navbar bg-base-100">
-        <div class="navbar-start">
-            <a class="btn btn-ghost text-xl">Your Logo</a>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100 shadow">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">BrandName</a>
         </div>
-        <div class="navbar-end">
-            <button class="btn btn-primary">Get Started</button>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <main class="container">
-        {{ content }}
+    <!-- Hero Section -->
+    <header class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Welcome to Modern Design</h1>
+                <p class="py-6">Discover amazing content and services built with daisyUI and Tailwind CSS. Fully
+                    responsive and stylish.</p>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-10">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card bg-base-100 shadow-md">
+                <div class="card-body">
+                    <h2 class="card-title">Feature One</h2>
+                    <p>Highlight the best parts of your project or service.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-md">
+                <div class="card-body">
+                    <h2 class="card-title">Feature Two</h2>
+                    <p>Use engaging visuals and text to captivate users.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-md">
+                <div class="card-body">
+                    <h2 class="card-title">Feature Three</h2>
+                    <p>Make it easy for users to understand your value.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer p-10 bg-base-200 text-base-content">
-        <nav>
-            <h6 class="footer-title">Find Me</h6>
-            <a class="link link-hover">GitHub</a>
+    <footer class="footer p-10 bg-base-300 text-base-content">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Social</span>
+            <a class="link link-hover">Twitter</a>
+            <a class="link link-hover">Instagram</a>
+            <a class="link link-hover">Facebook</a>
             <a class="link link-hover">LinkedIn</a>
-        </nav>
+        </div>
     </footer>
 </body>
 
