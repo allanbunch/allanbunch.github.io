@@ -171,36 +171,11 @@ footer a:hover {
 }
 
 
-/* Fix for logo images to prevent distortion */
-.card img {
-  max-width: 100%; /* Allow the image to scale with the card */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure images fit within their container */
-  margin: 0 auto; /* Center the image */
-  display: block;
-  padding: 0.5rem 0; /* Add some space around the logo */
-}
-
-/* Text adjustments to prevent overflow */
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  word-wrap: break-word; /* Handle long words */
-  text-align: center; /* Ensure text stays centered */
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center; /* Center-align the description text */
-  padding: 0 0.5rem; /* Add some padding to avoid text touching edges */
-}
-
-/* Card container spacing adjustments */
+/* General adjustments for cards */
 .cards-container {
-  padding: 0 1rem; /* Add consistent padding around the container */
-  display: flex;
-  flex-direction: column;
+  padding: 0 1rem; /* Prevent cards from touching the edges */
+  display: grid; /* Use grid for better control over layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
   gap: 1.5rem; /* Add spacing between cards */
 }
 
@@ -208,33 +183,30 @@ footer a:hover {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem; /* Add extra padding to ensure content stays within bounds */
+  padding: 1.5rem;
   text-align: center;
   max-width: 100%;
 }
 
-/* Adjustments for mobile responsiveness */
-@media (max-width: 768px) {
-  .cards-container {
-    padding: 0 0.5rem; /* Narrower padding for smaller screens */
-  }
-
-  .card {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .card img {
-    max-width: 80%; /* Slightly reduce logo size for smaller screens */
-  }
+/* Text adjustments */
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
 }
 
-@media (max-width: 480px) {
-  .card img {
-    max-width: 70%; /* Further reduce logo size for very small screens */
-  }
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 0.5rem;
+}
 
-  .card p {
-    font-size: 0.9rem; /* Adjust font size for readability on small screens */
-  }
+/* Fix for logo images */
+.card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
