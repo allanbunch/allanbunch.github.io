@@ -13,24 +13,28 @@
     <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> -->
 </head>
 
-<body>
-    <!-- Full-width layout -->
-    <header class="hero">
-        <h1>Allan Bunch</h1>
-        <p>Technology Innovator | Visionary | Futurist</p>
-    </header>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-xl">Your Logo</a>
+        </div>
+        <div class="navbar-end">
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </div>
 
     <main class="container">
         {{ content }}
     </main>
 
-    <footer>
-        <p>© {{ site.time | date: '%Y' }} Allan Bunch</p>
-        <ul class="social-links">
-            <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
+    <!-- Footer -->
+    <footer class="footer p-10 bg-base-200 text-base-content">
+        <nav>
+            <h6 class="footer-title">Find Me</h6>
+            <a class="link link-hover">GitHub</a>
+            <a class="link link-hover">LinkedIn</a>
+        </nav>
     </footer>
 </body>
 
